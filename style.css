@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: url("images/bg-desktop.png") hsl(229, 57%, 11%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  font-size: 14px;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 50rem;
+
+  height: 190px;
+}
+.top {
+  background: hsl(228, 56%, 26%);
+  width: 25%;
+  padding: 2.5em;
+  border-radius: 0.7em 7em 0.7em 0.7em;
+}
+.items {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+.items div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(229, 57%, 11%);
+  width: 38px;
+  height: 38px;
+  padding: 0.3em;
+  border-radius: 0.6em;
+  cursor: pointer;
+}
+.sub {
+  background: hsl(228, 56%, 26%);
+  width: 50%;
+  padding: 2.5em;
+  margin-top: 4em;
+  border-radius: 0.7em;
+  position: relative;
+}
+.flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  top: -40px;
+  background: white;
+  padding: 0.7em;
+  border-radius: 0.6em;
+  color: hsl(229, 7%, 55%);
+  width: 130px;
+  gap: 0.6em;
+  font-weight: 400;
+}
+.flow::after {
+  position: absolute;
+  content: "";
+  background: white;
+  height: 40px;
+  width: 30px;
+  bottom: -25px;
+  right: 0;
+}
+.flow::before {
+  position: absolute;
+  content: "";
+  background: hsl(228, 56%, 26%);
+  height: 25px;
+  width: 40px;
+  bottom: -34.7px;
+  right: 2px;
+  z-index: 3;
+  transform: rotate(38deg);
+}
+
+.num {
+  font-size: 30px;
+  color: black;
+  font-weight: 700;
+}
+.gb {
+  font-weight: 400;
+}
+.back {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 17px;
+  background: hsl(229, 57%, 11%);
+  border-radius: 999em;
+  margin: 1em 0 0 0;
+  padding: 0px 3px 0px 3px;
+}
+.med {
+  display: flex;
+  align-items: center;
+  width: 81.5%;
+  height: 12px;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  border-radius: 999em;
+  margin: 0;
+  padding: 0px 1px 0px 1px;
+  justify-content: end;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: hsl(243, 100%, 93%);
+  cursor: pointer;
+}
+.main-p p {
+  color: hsl(229, 7%, 55%);
+  font-weight: 100;
+  font-size: 14px;
+}
+span {
+  color: hsl(243, 100%, 93%);
+}
+.data {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(243, 100%, 93%);
+  font-weight: 100;
+  margin-top: 0.5em;
+}
+@media (max-width: 810px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .top {
+    width: 55vw;
+  }
+  .sub {
+    width: 55vw;
+  }
+  body {
+    background: url("images/bg-mobile.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .flow {
+    top: 110px;
+    right: 0;
+    bottom: 0;
+    bottom: -30px;
+    right: 28%;
+  }
+  .flow::after {
+    display: none;
+  }
+  .flow::before {
+    display: none;
+  }
+  .sub {
+    text-align: center;
+  }
+}
